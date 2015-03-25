@@ -29,10 +29,12 @@
       </ion-header-bar>
       <ion-content>
         <ion-list>
-          <ion-item ng-repeat="sermon in sermons" href="{{ $sermon.url }}">
+          <ion-item ng-repeat="sermon in sermons">
+            <a href="#" ng-click="openVideo(sermon.url)">
             <img src="{{ sermon.cover }}" style="float: left; height: 60px; padding: 5px;">
             <h2>{{ sermon.title }}</h2>
             <p>{{ sermon.date }}<br/>{{ sermon.byline }}<br/>{{ sermon.text }}</p>
+            </a>
           </ion-item>
         </ion-list>
       </ion-content>

@@ -6,8 +6,13 @@
 angular.module('starter', ['ionic'])
 
 .controller('SermonCtrl', function($scope, $http) {
-  $http.get('http://www.compasshb.com/feeds/sermons.json')
+  $http.get('http://www.compasshb.com/feed/sermons.json')
     .then(function(res){
       $scope.sermons = res.data;
     });
+
+    $scope.openVideo = function (url) {
+    	window.open(url ,'_blank','location=yes');
+    }
+
 });
