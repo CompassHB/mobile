@@ -9,19 +9,26 @@ angular.module('starter', ['ionic'])
 
 	ionic.Platform.ready(function(){
 	    if(typeof analytics !== undefined) {
+            // analytics.debugMode();
             analytics.startTrackerWithId("UA-53384235-4");
-            analytics.trackView("Main Controller");
         } else {
             console.log("Google Analytics Unavailable");
         }
 	});
 
 	$http.get('http://www.compasshb.com/feed/sermons.json').then(function(res) {
-      $scope.sermons = res.data;
+        $scope.sermons = res.data;
+        analytics.trackView("Main Controller");
     });
 
     $scope.openVideo = function (url) {
     	window.open(url ,'_blank','location=yes');
+    }
+
+    $scope.initEvent = function() {
+        if(typeof analytics !== undefined) {
+            analytics.trackEvent("Category", "Action", "Label", 25);
+        }
     }
 
 });
