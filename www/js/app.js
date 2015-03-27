@@ -21,8 +21,8 @@ angular.module('starter', ['ionic'])
         analytics.trackView("Main Controller");
     });
 
-    $scope.openVideo = function (url) {
-    	window.open(url ,'_blank','location=yes');
+    $scope.openVideo = function (slug) {
+    	window.open('http://www.compasshb.com/' + slug ,'_blank','location=yes');
     }
 
     $scope.initEvent = function() {

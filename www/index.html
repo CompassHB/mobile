@@ -23,21 +23,39 @@
   </head>
   <body ng-app="starter" ng-controller="SermonCtrl">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Sermons</h1>
-      </ion-header-bar>
-      <ion-content>
-        <ion-list>
-          <ion-item ng-repeat="sermon in sermons">
-            <a href="#" ng-click="openVideo(sermon.url)">
-            <img src="{{ sermon.cover }}" style="float: left; height: 60px; padding: 5px;">
-            <h2>{{ sermon.title }}</h2>
-            <p>{{ sermon.date }}<br/>{{ sermon.byline }}<br/>{{ sermon.text }}</p>
-            </a>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-pane>
+    <ion-tabs class="tabs-positive tabs-icon-only">
+
+        <ion-tab title="Sermons" icon-on="ion-ios-mic" icon-off="ion-ios-mic-outline">
+             <ion-pane>
+                <ion-header-bar class="bar-stable">
+                    <h1 class="title">Sermons</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <ion-list>
+                        <ion-item ng-repeat="sermon in sermons">
+                            <a href="#" ng-click="openVideo('sermons/' + sermon.slug)">
+                            <img src="{{ sermon.cover }}" style="float: left; height: 60px; padding: 5px;">
+                            <h2>{{ sermon.title }}</h2>
+                            <p>{{ sermon.text }}<br/>{{ sermon.byline }}<br/>{{ sermon.date }}</p>
+                            </a>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-pane>
+        </ion-tab>
+
+      <ion-tab title="About" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ng-click="openVideo('read')">
+            <ion-pane>
+                <ion-header-bar class="bar-stable">
+                    <h1 class="title">Scripture of the Day</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <p>SOTD</p>
+                </ion-content>
+            </ion-pane>
+      </ion-tab>
+
+    </ion-tabs>
+
   </body>
 </html>
