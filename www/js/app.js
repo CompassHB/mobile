@@ -6,8 +6,17 @@
 angular.module('starter', ['ionic'])
 
 .controller('SermonCtrl', function($scope, $http) {
-  $http.get('http://www.compasshb.com/feed/sermons.json')
-    .then(function(res){
+
+	ionic.Platform.ready(function(){
+	    if(typeof analytics !== undefined) {
+            analytics.startTrackerWithId("UA-53384235-4");
+            analytics.trackView("Main Controller");
+        } else {
+            console.log("Google Analytics Unavailable");
+        }
+	});
+
+	$http.get('http://www.compasshb.com/feed/sermons.json').then(function(res) {
       $scope.sermons = res.data;
     });
 
