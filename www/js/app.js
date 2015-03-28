@@ -8,12 +8,37 @@ angular.module('starter', ['ionic'])
 .controller('SermonCtrl', function($scope, $http) {
 
 	ionic.Platform.ready(function(){
+
+        // Analytics
 	    if(typeof analytics !== undefined) {
             // analytics.debugMode();
             analytics.startTrackerWithId("UA-53384235-4");
         } else {
             console.log("Google Analytics Unavailable");
         }
+
+        // Parse
+        parsePlugin.initialize('Y0Lp6L6KAFoBehaNDXsla5FTmmOIqgjDmhBLspSY', 'kFzbp2OuGtgW7NTC8zJ9nhoknPi3u5DimBePMiGp', function() {
+            parsePlugin.subscribe('ScriptureOfTheDay', function() {
+                parsePlugin.getInstallationId(function(id) {
+                    /**
+                     * Now you can construct an object and save it to your own services, or Parse, and corrilate users to parse installations
+                     */
+                     var install_data = {
+                        installation_id: id,
+                        channels: ['ScriptureOfTheDay']
+                     }
+                     /**
+                     */
+                }, function(e) {
+                    alert('error');
+                });
+            }, function(e) {
+                alert('error');
+            });
+        }, function(e) {
+            alert('error');
+        });
 	});
 
 	$http.get('http://www.compasshb.com/feed/sermons.json').then(function(res) {
@@ -21,8 +46,8 @@ angular.module('starter', ['ionic'])
         analytics.trackView("Main Controller");
     });
 
-    $scope.openVideo = function (slug) {
-    	window.open('http://www.compasshb.com/' + slug ,'_blank','location=yes');
+    $scope.openVideo = function (url) {
+    	window.open(url, '_blank','location=yes');
     }
 
     $scope.initEvent = function() {

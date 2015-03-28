@@ -5,12 +5,9 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -20,22 +17,26 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+
+    <!-- fonts -->
+    <script src="//use.typekit.net/gdu1kdg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body ng-app="starter" ng-controller="SermonCtrl">
 
     <ion-tabs class="tabs-positive tabs-icon-only">
 
-        <ion-tab title="Sermons" icon-on="ion-ios-mic" icon-off="ion-ios-mic-outline">
+        <ion-tab title="Sermons" icon-on="ion-ios-monitor" icon-off="ion-ios-monitor-outline">
              <ion-pane>
                 <ion-header-bar class="bar-stable">
-                    <h1 class="title">Sermons</h1>
+                    <h1 class="title tk-seravek-web">Sermon Videos</h1>
                 </ion-header-bar>
                 <ion-content>
                     <ion-list>
                         <ion-item ng-repeat="sermon in sermons">
-                            <a href="#" ng-click="openVideo('sermons/' + sermon.slug)">
+                            <a href="#" ng-click="openVideo('http://www.compasshb.com/sermons/' + sermon.slug)" class="sermon-item">
+                            <h2>{{ sermon.sku }}. {{ sermon.title }}</h2>
                             <img src="{{ sermon.cover }}" style="float: left; height: 60px; padding: 5px;">
-                            <h2>{{ sermon.title }}</h2>
                             <p>{{ sermon.text }}<br/>{{ sermon.byline }}<br/>{{ sermon.date }}</p>
                             </a>
                         </ion-item>
@@ -44,15 +45,8 @@
             </ion-pane>
         </ion-tab>
 
-      <ion-tab title="About" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ng-click="openVideo('read')">
-            <ion-pane>
-                <ion-header-bar class="bar-stable">
-                    <h1 class="title">Scripture of the Day</h1>
-                </ion-header-bar>
-                <ion-content>
-                    <p>SOTD</p>
-                </ion-content>
-            </ion-pane>
+      <ion-tab title="About" icon-on="ion-ios-chatboxes" icon-off="ion-ios-chatboxes-outline" ng-click="openVideo('http://www.compasshb.com/read')">
+        <p>Scripture of the Day</p>
       </ion-tab>
 
     </ion-tabs>
