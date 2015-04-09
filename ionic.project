@@ -1,6 +1,6 @@
 {
   "name": "mobile",
-  "app_id": "",
+  "app_id": "8f6385a7",
   "gulpStartupTasks": [
     "sass",
     "watch"
