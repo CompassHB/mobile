@@ -17,3 +17,6 @@ You can now preview the app on your phone before commiting changes
 # Misc. Notes
 * (iOS) UIBackgroundModes: added to iOS -info.plist for background audio
 * (iOS) AVFoundation: added to project frameworks
+* (iOS) Fix overlapping status bar: in  -(void)viewDidLoad
+** if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+**        self.edgesForExtendedLayout = UIRectEdgeNone;
