@@ -46,6 +46,18 @@ angular.module('starter', ['ionic'])
         analytics.trackView("Main Controller");
     });
 
+    $scope.doRefresh = function() {
+        $http.get('https://www.compasshb.com/feed/sermons.json')
+            .success(function(newItems) {
+                $scope.sermons = newItems;
+            })
+            .finally(function() {
+                // Stop the ion-refresher from spinning
+                $scope.$broadcast('scroll.refreshComplete');
+            }
+        );
+    };
+
     $scope.openVideo = function (url) {
     	window.open(url, '_blank','location=yes');
     }
