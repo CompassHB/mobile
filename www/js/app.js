@@ -41,7 +41,7 @@ angular.module('starter', ['ionic'])
         });
 	});
 
-	$http.get('http://www.compasshb.com/feed/sermons.json').then(function(res) {
+	$http.get('https://www.compasshb.com/feed/sermons.json').then(function(res) {
         $scope.sermons = res.data;
         analytics.trackView("Main Controller");
     });

@@ -35,8 +35,8 @@
                     <ion-list>
                         <ion-item ng-repeat="sermon in sermons">
                             <a href="#" ng-click="openVideo('http://www.compasshb.com/sermons/' + sermon.slug)" class="sermon-item">
-                            <h2>{{ sermon.sku }}. {{ sermon.title }}</h2>
-                            <img src="{{ sermon.cover }}" style="float: left; height: 60px; padding: 5px;">
+                            <div class="cover-image" style="background-image: url('{{ sermon.cover }}');"></div>
+                            <h2><strong>{{ sermon.title }}</strong></h2>
                             <p>{{ sermon.text }}<br/>{{ sermon.byline }}<br/>{{ sermon.date }}</p>
                             </a>
                         </ion-item>
