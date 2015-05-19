@@ -7,7 +7,7 @@ angular.module('starter', ['ionic'])
 
 .controller('SermonCtrl', function($scope, $http) {
 
-	ionic.Platform.ready(function(){
+	ionic.Platform.ready(function() {
 
         // Analytics
 	    if(typeof analytics !== undefined) {
@@ -44,6 +44,12 @@ angular.module('starter', ['ionic'])
 	$http.get('https://www.compasshb.com/feed/sermons.json').then(function(res) {
         $scope.sermons = res.data;
         analytics.trackView("Main Controller");
+    });
+
+    $http.get('https://www.compasshb.com/api/v1/passages').then(function(res) {
+        $scope.passages = res.data;
+        $scope.passages.versesHTML = $sce.trustAsHtml($scope.passages.verses);
+        analytics.trackView("Scripture of the Day Controller");
     });
 
     $scope.doRefresh = function() {

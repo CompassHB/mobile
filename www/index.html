@@ -32,16 +32,14 @@
                     <h1 class="title tk-seravek-web">Sermon Videos</h1>
                 </ion-header-bar>
                 <ion-content>
-                    <ion-refresher
-                        pulling-text="Pull to refresh..."
-                        on-refresh="doRefresh()">
+                    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
                     </ion-refresher>
                     <ion-list>
                         <ion-item ng-repeat="sermon in sermons">
-                            <a href="#" ng-click="openVideo('http://www.compasshb.com/sermons/' + sermon.slug)" class="sermon-item">
-                            <div class="cover-image" style="background-image: url('{{ sermon.cover }}');"></div>
+                            <a href="#" ng-click="openVideo(&apos;http://www.compasshb.com/sermons/&apos; + sermon.slug)" class="sermon-item">
+                            <div class="cover-image" style="background-image: url(&apos;{{ sermon.cover }}&apos;);"></div>
                             <h2><strong>{{ sermon.title }}</strong></h2>
-                            <p>{{ sermon.text }}<br/>{{ sermon.byline }}<br/>{{ sermon.date }}</p>
+                            <p>{{ sermon.text }}<br>{{ sermon.byline }}<br>{{ sermon.date }}</p>
                             </a>
                         </ion-item>
                     </ion-list>
@@ -49,9 +47,23 @@
             </ion-pane>
         </ion-tab>
 
-      <ion-tab title="About" icon-on="ion-ios-chatboxes" icon-off="ion-ios-chatboxes-outline" ng-click="openVideo('http://www.compasshb.com/read')">
-        <p>Scripture of the Day</p>
-      </ion-tab>
+        <ion-tab title="Scripture of the Day" icon-on="ion-ios-chatboxes" icon-off="ion-ios-chatboxes-outline">
+            <ion-pane>
+                <ion-header-bar class="bar-stable">
+                    <h1 class="title tk-seravek-web">Scripture of the Day</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <div style="padding: 20px;" ng-bind-html="passages.verses"></div>
+                        <!-- p>One active user. 40 people have read today.</p -->
+
+                        <center>
+                            <a href="#" ng-click="openVideo(&apos;https://www.compasshb.com/read#disqus_thread&apos;)">View Comments</a>
+                        </center><br>
+
+                    
+                </ion-content>
+            </ion-pane>
+        </ion-tab>
 
     </ion-tabs>
 
