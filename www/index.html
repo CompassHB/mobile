@@ -53,6 +53,7 @@
                     <h1 class="title tk-seravek-web">Scripture of the Day</h1>
                 </ion-header-bar>
                 <ion-content>
+                    <center><br><audio src="{{ passages.audio | trustAsResourceUrl }}" controls="controls"></audio></center>
                     <div style="padding: 20px;" ng-bind-html="passages.verses"></div>
                         <!-- p>One active user. 40 people have read today.</p -->
 
@@ -60,7 +61,7 @@
                             <a href="#" ng-click="openVideo(&apos;https://www.compasshb.com/read#disqus_thread&apos;)">View Comments</a>
                         </center><br>
 
-                    
+
                 </ion-content>
             </ion-pane>
         </ion-tab>

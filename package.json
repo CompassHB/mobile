@@ -1,6 +1,6 @@
 {
   "name": "mobile",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "mobile: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
@@ -14,5 +14,9 @@
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0"
   },
-  "cordovaPlugins": []
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ]
 }

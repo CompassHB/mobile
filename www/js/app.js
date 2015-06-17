@@ -3,7 +3,15 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular
+
+.module('starter', ['ionic'])
+
+.filter('trustAsResourceUrl', ['$sce', function($sce) {
+    return function(val) {
+        return $sce.trustAsResourceUrl(val);
+    };
+}])
 
 .controller('SermonCtrl', function($scope, $http) {
 
@@ -48,7 +56,6 @@ angular.module('starter', ['ionic'])
 
     $http.get('https://www.compasshb.com/api/v1/passages').then(function(res) {
         $scope.passages = res.data;
-        $scope.passages.versesHTML = $sce.trustAsHtml($scope.passages.verses);
         analytics.trackView("Scripture of the Day Controller");
     });
 
