@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 
-import { SermonsListView } from './components/SermonsListView';
+import { SermonTab } from './components/SermonTab';
 
 import {
     AppRegistry,
@@ -27,7 +27,7 @@ class mobile extends Component<{}, {}> {
             Press Cmd+R to reload,{'\n'}
             Cmd+D or shake for dev menu
           </Text>
-          <SermonsListView />
+          <SermonTab />
         </View>
     );
   }
