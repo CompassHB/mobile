@@ -9,7 +9,8 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View
+    View,
+    DrawerLayoutAndroid
 } from 'react-native';
 import ViewStyle = __React.ViewStyle;
 import TextStyle = __React.TextStyle
@@ -18,17 +19,20 @@ import TextStyle = __React.TextStyle
 
 class mobile extends Component<{}, {}> {
   render() {
-    return (
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Compass HB!
-          </Text>
-          <Text style={styles.instructions}>
-            Press Cmd+R to reload,{'\n'}
-            Cmd+D or shake for dev menu
-          </Text>
-          <SermonTab />
+    var navigationView = (
+        <View style={{flex: 1, backgroundColor: '#fff'}}>
+          <Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}>I'm in the Drawer!</Text>
         </View>
+    );
+    return (
+        <DrawerLayoutAndroid
+            drawerWidth={300}
+            renderNavigationView={ () => navigationView}>
+          <View style={{flex: 1, alignItems: 'center'}}>
+            <Text style={{margin: 10, fontSize: 15, textAlign: 'right'}}>Hello</Text>
+            <Text style={{margin: 10, fontSize: 15, textAlign: 'right'}}>World!</Text>
+          </View>
+        </DrawerLayoutAndroid>
     );
   }
 }
