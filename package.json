@@ -8,10 +8,14 @@
     "postinstall": "typings install",
     "watch": "tsc -w",
     "ios": "react-native run-ios",
-    "android": "react-native run-android"
+    "android": "react-native run-android",
+    "test": "jest"
   },
   "dependencies": {
     "react": "15.2.1",
     "react-native": "0.30.0"
+  },
+  "devDependencies": {
+    "jest-cli": "^13.2.3"
   }
 }
