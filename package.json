@@ -9,7 +9,8 @@
     "watch": "tsc -w",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "test": "jest"
+    "test": "jest",
+    "posttest": "node_modules/.bin/nsp check"
   },
   "dependencies": {
     "react": "15.2.1",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "jest-cli": "^13.2.3",
+    "nsp": "^2.6.1",
     "typings": "^1.3.2"
   }
 }
