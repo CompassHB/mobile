@@ -4,16 +4,15 @@ import { NavigationBar } from '@shoutem/ui';
 
 class ItemDetailView extends React.Component {
 
-  navigateBack(){
-
-  }
-
   render() {
+
+    const {title, content} = this.props.post
+
     return (
       <View style={styles.container}>
         <NavigationBar
           hasHistory
-          title="Item Details"
+          title="COMPASSHB"
           navigateBack={this.props.navigator.pop}
           style={{
             container:{
@@ -26,7 +25,7 @@ class ItemDetailView extends React.Component {
         />
 
         <View style={styles.contentView}>
-          <Text>Item Details</Text>
+          <Text>{title.rendered}</Text>
         </View>
       </View>
     );
