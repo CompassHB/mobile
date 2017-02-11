@@ -5,5 +5,6 @@
  */
 
 import { AppRegistry } from 'react-native';
+import App from './index.js'
 
-AppRegistry.registerComponent('compasshb', () => compasshb);
+AppRegistry.registerComponent('compasshb', () => App);
