@@ -6,17 +6,17 @@ import View2 from './View2'
 class TabView extends React.Component {
 
   render() {
+    const {navigator} = this.props
     return (
       <ScrollableTabView
-        style={{marginTop: 20, }}
         renderTabBar={() => <DefaultTabBar />}
+        tabBarPosition="bottom"
       >
-        <View1 tabLabel="View 1" />
-        <View2 tabLabel="View 2" />
+        <View1 tabLabel="View 1" navigator={navigator} />
+        <View2 tabLabel="View 2" navigator={navigator} />
       </ScrollableTabView>
     );
   }
-
 }
 
 export default TabView;
