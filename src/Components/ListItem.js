@@ -14,6 +14,7 @@ class ListItem extends React.Component {
           <Image
             styleName="small rounded-corners"
             source={{ uri: source_url }}
+            style={{backgroundColor: '#f1f1f1'}}
           />
           <Subtitle styleName="top">{title.rendered}</Subtitle>
         </Row>

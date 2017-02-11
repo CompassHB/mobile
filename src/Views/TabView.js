@@ -11,6 +11,7 @@ class TabView extends React.Component {
       <ScrollableTabView
         renderTabBar={() => <DefaultTabBar />}
         tabBarPosition="bottom"
+        tabBarBackgroundColor="#f8f8f8"
       >
         <View1 tabLabel="View 1" navigator={navigator} />
         <View2 tabLabel="View 2" navigator={navigator} />

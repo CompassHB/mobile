@@ -1,12 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { NavigationBar } from '@shoutem/ui';
+import { View, Text, StyleSheet, ScrollView, WebView, Dimensions } from 'react-native';
+import { NavigationBar, Title, View as SView } from '@shoutem/ui';
+import HTML from 'react-native-fence-html'
 
 class ItemDetailView extends React.Component {
 
   render() {
 
     const {title, content} = this.props.post
+
+    const renderers = {
+      iframe: (htmlAttribs, children, passProps) => {
+        return (
+          <View style={{width: Dimensions.get('window').width-30, height: 250}} >
+            <WebView
+              source={{uri: htmlAttribs.src}}
+              style={styles.webview}
+              startInLoadingState />
+          </View>)
+      }
+    }
 
     return (
       <View style={styles.container}>
@@ -23,10 +36,12 @@ class ItemDetailView extends React.Component {
             }
           }}
         />
-
-        <View style={styles.contentView}>
-          <Text>{title.rendered}</Text>
-        </View>
+        <ScrollView style={styles.contentView}>
+          <SView styleName="md-gutter">
+            <Title>{title.rendered}</Title>
+            <HTML html={content.rendered} renderers={renderers}/>
+          </SView>
+        </ScrollView>
       </View>
     );
   }
@@ -40,7 +55,11 @@ const styles = StyleSheet.create({
   },
   contentView: {
     marginTop: 70,
-    backgroundColor: 'transparent'
+    backgroundColor: '#ffffff'
+  },
+  webview: {
+    marginTop: 15,
+    marginBottom: 15
   }
 });
 
