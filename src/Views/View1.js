@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, AsyncStorage } from 'react-native';
 import { NavigationBar, ListView } from '@shoutem/ui';
 import ListItem from '../Components/ListItem'
 import ItemDetailView from './ItemDetailView'
 
 const API_URL = 'https://api.compasshb.com/wp-json/wp/v2/posts?_embed&filter[cat]=1&per_page=100';
+const VIEW1_POSTS = 'VIEW1_POSTS'
 
 class View1 extends React.Component {
 
@@ -28,8 +29,22 @@ class View1 extends React.Component {
 
   componentWillMount = async () => {
     try {
+      const store = await AsyncStorage.getItem(VIEW1_POSTS)
+      const posts = JSON.parse(store)
+      if (posts !== null) {
+        this.setState({loading: false, posts})
+      }
+      this.fetchPosts();
+    } catch (e) {
+      this.setState({loading: false, error: true})
+    }
+  }
+
+  fetchPosts = async () => {
+    try {
       const response = await fetch(API_URL)
       const posts = await response.json()
+      await AsyncStorage.setItem(VIEW1_POSTS, JSON.stringify(posts))
       this.setState({loading: false, posts})
     } catch (e) {
       this.setState({loading: false, error: true})
