@@ -58,6 +58,7 @@ class ItemDetailView extends React.Component {
           <SView styleName="md-gutter">
             <Title>{title.rendered}</Title>
             { Platform.OS == 'ios' ? <HTML html={content.rendered} renderers={renderers}/> : this.renderVideo() }
+            { Platform.OS == 'android' ? <HTML html={content.rendered} /> : null }
           </SView>
         </ScrollView>
       </View>
