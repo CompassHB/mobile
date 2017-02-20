@@ -4,7 +4,7 @@ import { NavigationBar, ListView } from '@shoutem/ui';
 import ListItem from '../Components/ListItem'
 import ItemDetailView from './ItemDetailView'
 
-const API_URL = 'https://api.compasshb.com/wp-json/wp/v2/posts?_embed&filter[cat]=1&per_page=100';
+const API_URL = 'https://api.compasshb.com/wp-json/wp/v2/posts?_embed&categories=1&per_page=100';
 const VIEW1_POSTS = 'VIEW1_POSTS'
 
 class View1 extends React.Component {
@@ -56,7 +56,7 @@ class View1 extends React.Component {
 
     return (
       <View style={styles.container}>
-        <NavigationBar title="COMPASSHB" />
+        <NavigationBar title="Sermons" />
         <View style={styles.contentView}>
           { error==true ? <Text> Failed to load posts! </Text> :  <ListView
                 data={posts}

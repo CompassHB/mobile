@@ -56,7 +56,7 @@ class View2 extends React.Component {
 
     return (
       <View style={styles.container}>
-        <NavigationBar title="COMPASSHB" />
+        <NavigationBar title="Scripture of the Day" />
         <View style={styles.contentView}>
           { error==true ? <Text> Failed to load posts! </Text> : <ListView
                 data={posts}

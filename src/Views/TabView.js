@@ -13,8 +13,8 @@ class TabView extends React.Component {
         tabBarPosition="bottom"
         tabBarBackgroundColor="#f8f8f8"
       >
-        <View1 tabLabel="View 1" navigator={navigator} />
-        <View2 tabLabel="View 2" navigator={navigator} />
+        <View1 tabLabel="Sermons" navigator={navigator} />
+        <View2 tabLabel="Reading" navigator={navigator} />
       </ScrollableTabView>
     );
   }
