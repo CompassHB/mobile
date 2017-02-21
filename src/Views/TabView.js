@@ -9,7 +9,11 @@ class TabView extends React.Component {
     const {navigator} = this.props
     return (
       <ScrollableTabView
-        renderTabBar={() => <DefaultTabBar />}
+        renderTabBar={() => <DefaultTabBar
+                              activeTextColor="#497f9e"
+                              underlineStyle={{ backgroundColor: '#497f9e' }}
+                            />
+                    }
         tabBarPosition="bottom"
         tabBarBackgroundColor="#f8f8f8"
       >
