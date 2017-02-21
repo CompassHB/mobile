@@ -46,7 +46,7 @@ class ItemDetailView extends React.Component {
     const { title, id, slug } = this.props.post;
     const html = `<html>
                     <body>
-                      <div id="disqus_thread">Test</div>
+                      <div id="disqus_thread"></div>
                 <script>
                 var disqus_shortname = "compasshb";
                 var disqus_url = "https://www.compasshb.com/read/${slug}/";
@@ -97,6 +97,19 @@ class ItemDetailView extends React.Component {
       }
     }
 
+    renderers.span = (htmlAttribs, children, passProps) => {
+      switch(htmlAttribs.class) {
+        case 'verse-num':
+          return (<Text style={styles.esvVerse}>{children}</Text>)
+          break;
+        case 'woc':
+          return (<Text style={styles.esvWoc}>{children}</Text>)
+          break;
+        default:
+          return (<Text>{children}</Text>)
+      }
+    }
+
     return renderers;
   }
   render() {
@@ -109,7 +122,7 @@ class ItemDetailView extends React.Component {
       <View style={styles.container}>
         <NavigationBar
           hasHistory
-          title="COMPASSHB"
+          title="CompassHB"
           navigateBack={this.props.navigator.pop}
           style={{
             container:{
@@ -160,6 +173,13 @@ const styles = StyleSheet.create({
   webview: {
     marginTop: 15,
     marginBottom: 15
+  },
+  esvVerse: {
+    fontSize: 11,
+    fontWeight: 'bold'
+  },
+  esvWoc: {
+    color: '#900'
   }
 });
 

@@ -1,4 +1,4 @@
-package com.compasshb;
+package com.compasshb.mobile;
 
 import android.app.Application;
 import android.util.Log;
