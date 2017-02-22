@@ -97,18 +97,7 @@ class ItemDetailView extends React.Component {
       }
     }
 
-    renderers.span = (htmlAttribs, children, passProps) => {
-      switch(htmlAttribs.class) {
-        case 'verse-num':
-          return (<Text style={styles.esvVerse}>{children}</Text>)
-          break;
-        case 'woc':
-          return (<Text style={styles.esvWoc}>{children}</Text>)
-          break;
-        default:
-          return (<Text>{children}</Text>)
-      }
-    }
+
 
     return renderers;
   }
@@ -151,7 +140,7 @@ class ItemDetailView extends React.Component {
             onMessage={(e) => {
               const newHeight = parseInt(e.nativeEvent.data, 10);
               if (newHeight !== NaN)
-              this.setState({ commentHeight: newHeight });
+                this.setState({ commentHeight: newHeight });
             }}
           />
         </ScrollView>
