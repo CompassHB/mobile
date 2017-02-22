@@ -10,3 +10,8 @@ This is an open-source mobile application (iOS and Android) for Compass Bible Ch
 
 * [React Native](https://facebook.github.io/react-native/)
 * [ShoutEm UI](https://shoutem.github.io/docs/ui-toolkit/introduction)
+
+## Deployment
+
+* Android: [Generating Signed APK](https://facebook.github.io/react-native/docs/signed-apk-android.html)
+* iOS: Product --> Archive using Xcode
