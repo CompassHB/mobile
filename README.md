@@ -15,3 +15,4 @@ This is an open-source mobile application (iOS and Android) for Compass Bible Ch
 
 * Android: [Generating Signed APK](https://facebook.github.io/react-native/docs/signed-apk-android.html)
 * iOS: Product --> Archive using Xcode
+* iOS Maps: https://gist.github.com/heron2014/e60fa003e9b117ce80d56bb1d5bfe9e0

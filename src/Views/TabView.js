@@ -1,7 +1,9 @@
 import React from 'react';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view'
-import View1 from './View1'
-import View2 from './View2'
+import { View } from 'react-native';
+import Teaching from './Teaching'
+import Training from './Training'
+import Reaching from './Reaching'
 
 class TabView extends React.Component {
 
@@ -17,8 +19,10 @@ class TabView extends React.Component {
         tabBarPosition="bottom"
         tabBarBackgroundColor="#f8f8f8"
       >
-        <View1 tabLabel="Sermons" navigator={navigator} />
-        <View2 tabLabel="Reading" navigator={navigator} />
+        <Reaching tabLabel="Reaching" navigator={navigator} />
+        <Teaching tabLabel="Teaching" navigator={navigator} />
+        <Training tabLabel="Training" navigator={navigator} />
+        <Training tabLabel="..." navigator={navigator} />
       </ScrollableTabView>
     );
   }

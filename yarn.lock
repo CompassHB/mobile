@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@shoutem/animation@^0.8.10":
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/@shoutem/animation/-/animation-0.8.10.tgz#2246709c88ab8c39c3e7ab7f4c212268fb63e52e"
+"@shoutem/animation@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@shoutem/animation/-/animation-0.9.0.tgz#4d14c1caf36fd94f12f428bd9f1bd7bf02390f3b"
   dependencies:
     hoist-non-react-statics "^1.2.0"
     lodash "^4.15.0"
@@ -17,11 +17,11 @@
     lodash "^4.10.1"
     tinycolor2 "^1.3.0"
 
-"@shoutem/ui@^0.10.9":
-  version "0.10.9"
-  resolved "https://registry.yarnpkg.com/@shoutem/ui/-/ui-0.10.9.tgz#5cd2cb72ff95fe48d292a3acd8c7dd6403287967"
+"@shoutem/ui@^0.10.11":
+  version "0.10.11"
+  resolved "https://registry.yarnpkg.com/@shoutem/ui/-/ui-0.10.11.tgz#152554bb3910717a64e027e8cedac6fa7084d211"
   dependencies:
-    "@shoutem/animation" "^0.8.10"
+    "@shoutem/animation" "^0.9.0"
     "@shoutem/theme" "^0.8.8"
     babel-plugin-transform-decorators-legacy "^1.3.4"
     buffer "^4.5.1"
@@ -31,6 +31,7 @@
     lodash "^4.15.0"
     react-native-lightbox "git+https://github.com/shoutem/react-native-lightbox#master"
     react-native-linear-gradient "^1.5.15"
+    react-native-photo-view "^1.2.0"
     react-native-share "^1.0.13"
     react-native-transformable-image ldn0x7dc/react-native-transformable-image#master
     react-native-vector-icons "^2.0.3"
@@ -808,8 +809,8 @@ babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.21.0, babel-types@^6.22
     to-fast-properties "^1.0.1"
 
 babylon@^6.11.0, babylon@^6.13.0, babylon@^6.14.1, babylon@^6.15.0:
-  version "6.15.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.15.0.tgz#ba65cfa1a80e1759b0e89fb562e27dccae70348e"
+  version "6.16.1"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.16.1.tgz#30c5a22f481978a9e7f8cdfdf496b11d94b404d3"
 
 balanced-match@^0.4.1:
   version "0.4.2"
@@ -1592,15 +1593,15 @@ find-up@^1.0.0, find-up@^1.1.2:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
-for-in@^0.1.5:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.6.tgz#c9f96e89bfad18a545af5ec3ed352a1d9e5b4dc8"
+for-in@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
 
 for-own@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/for-own/-/for-own-0.1.4.tgz#0149b41a39088c7515f51ebe1c1386d45f935072"
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/for-own/-/for-own-0.1.5.tgz#5265c681a4f294dabbf17c9509b6763aa84510ce"
   dependencies:
-    for-in "^0.1.5"
+    for-in "^1.0.1"
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -1981,8 +1982,8 @@ is-glob@^2.0.0, is-glob@^2.0.1:
     is-extglob "^1.0.0"
 
 is-my-json-valid@^2.12.4:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/is-my-json-valid/-/is-my-json-valid-2.15.0.tgz#936edda3ca3c211fd98f3b2d3e08da43f7b2915b"
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/is-my-json-valid/-/is-my-json-valid-2.16.0.tgz#f079dd9bfdae65ee2038aae8acbc86ab109e3693"
   dependencies:
     generate-function "^2.0.0"
     generate-object-property "^1.1.0"
@@ -1997,7 +1998,7 @@ is-number@^2.0.2, is-number@^2.1.0:
 
 is-posix-bracket@^0.1.0:
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/is-posix-bracket/-/is-posix-bracket-0.1.1.tgz#3334dc79774368e92f016e6fbc0a88f5cd6e6bc4"
+  resolved "http://registry.npmjs.org/is-posix-bracket/-/is-posix-bracket-0.1.1.tgz#3334dc79774368e92f016e6fbc0a88f5cd6e6bc4"
 
 is-primitive@^2.0.0:
   version "2.0.0"
@@ -3171,15 +3172,23 @@ react-native-gesture-responder@0.1.1:
     react-timer-mixin "^0.13.3"
 
 "react-native-lightbox@git+https://github.com/shoutem/react-native-lightbox.git#master":
-  version "0.6.0"
-  resolved "git+https://github.com/shoutem/react-native-lightbox.git#42f63838a9e778bb554275b10f029140071f35d1"
+  version "0.6.1"
+  resolved "git+https://github.com/shoutem/react-native-lightbox.git#0af4feb89f4a424c6225f6ab393028cbbdd73b74"
   dependencies:
-    react-native-view-transformer "0.0.28"
+    react-native-view-transformer ldn0x7dc/react-native-view-transformer#f7e028b6566022deac4e523052e74c2c63a4af7e
     react-timer-mixin "^0.13.3"
 
 react-native-linear-gradient@^1.5.15:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-1.6.2.tgz#1ea3e7a186b514661b927673aa9c427dd520999f"
+
+react-native-maps@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.13.0.tgz#f3d791a06d36d553bcc177514ee52fdea45474c0"
+
+react-native-photo-view@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-photo-view/-/react-native-photo-view-1.2.0.tgz#d379d368b1a13f272f9672af2b0ce5c96fa15409"
 
 react-native-scrollable-tab-view@^0.7.2:
   version "0.7.2"
@@ -3215,14 +3224,7 @@ react-native-vector-icons@^4.0.0:
     lodash "^4.0.0"
     yargs "^6.3.0"
 
-react-native-view-transformer@0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/react-native-view-transformer/-/react-native-view-transformer-0.0.28.tgz#01bb8c9e6cfff70a8d400e061c0cd27602662acb"
-  dependencies:
-    react-native-gesture-responder "0.1.1"
-    react-native-scroller "0.0.6"
-
-"react-native-view-transformer@github:ldn0x7dc/react-native-view-transformer#master":
+react-native-view-transformer@0.0.28, "react-native-view-transformer@github:ldn0x7dc/react-native-view-transformer#master", react-native-view-transformer@ldn0x7dc/react-native-view-transformer#f7e028b6566022deac4e523052e74c2c63a4af7e:
   version "0.0.28"
   resolved "https://codeload.github.com/ldn0x7dc/react-native-view-transformer/tar.gz/f7e028b6566022deac4e523052e74c2c63a4af7e"
   dependencies:
@@ -3418,7 +3420,7 @@ regenerator-transform@0.9.8:
 
 regex-cache@^0.4.2:
   version "0.4.3"
-  resolved "http://registry.npmjs.org/regex-cache/-/regex-cache-0.4.3.tgz#9b1a6c35d4d0dfcef5711ae651e8e9d3d7114145"
+  resolved "https://registry.yarnpkg.com/regex-cache/-/regex-cache-0.4.3.tgz#9b1a6c35d4d0dfcef5711ae651e8e9d3d7114145"
   dependencies:
     is-equal-shallow "^0.1.3"
     is-primitive "^2.0.0"
@@ -3497,8 +3499,10 @@ resolve@1.1.7:
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
 resolve@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.2.0.tgz#9589c3f2f6149d1417a40becc1663db6ec6bc26c"
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.3.2.tgz#1f0442c9e0cbb8136e87b9305f932f46c7f28235"
+  dependencies:
+    path-parse "^1.0.5"
 
 response-time@~2.3.1:
   version "2.3.2"
@@ -3521,8 +3525,8 @@ right-align@^0.1.1:
     align-text "^0.1.1"
 
 rimraf@^2.2.8, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@^2.5.4:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.0.tgz#89b8a0fe432b9ff9ec9a925a00b6cdb3a91bbada"
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
     glob "^7.0.5"
 
@@ -3887,8 +3891,8 @@ ua-parser-js@^0.7.9:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
 
 uglify-js@^2.6, uglify-js@^2.6.2:
-  version "2.7.5"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.5.tgz#4612c0c7baaee2ba7c487de4904ae122079f2ca8"
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.3.tgz#1ed5037bc224904c43d36e7310177c02c4c76808"
   dependencies:
     async "~0.2.6"
     source-map "~0.5.1"
@@ -3989,17 +3993,13 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.13"
 
-whatwg-fetch@>=0.10.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.2.tgz#fe294d1d89e36c5be8b3195057f2e4bc74fc980e"
-
-whatwg-fetch@^1.0.0:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.1.1.tgz#ac3c9d39f320c6dce5339969d054ef43dd333319"
 
 whatwg-url@^4.3.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-4.4.0.tgz#594f95781545c13934a62db40897c818cafa2e04"
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-4.5.0.tgz#79bb6f0e370a4dda1cbc8f3062a490cf8bbb09ea"
   dependencies:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
