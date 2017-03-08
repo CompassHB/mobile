@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, Dimensions } from 'react-native';
-import { NavigationBar, View, Tile, Caption, Row, Icon, Image, Overlay, Title, Subtitle, Button } from '@shoutem/ui';
+import { View, StyleSheet, Text, Dimensions } from 'react-native';
+import { Tile, Caption, Row, Icon, Image, Overlay, Title, Subtitle, Button } from '@shoutem/ui';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 const styles = StyleSheet.create({

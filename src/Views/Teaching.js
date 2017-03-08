@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, AsyncStorage } from 'react-native';
-import { NavigationBar, ListView, Image, Overlay, Heading, Title, Subtitle, Tile, Caption, Icon } from '@shoutem/ui';
+import { ListView , Image, Overlay, Heading, Title, Subtitle, Tile, Caption, Icon } from '@shoutem/ui';
 import ListItem from '../Components/ListItem'
 import ItemDetailView from './ItemDetailView'
 

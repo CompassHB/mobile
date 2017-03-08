@@ -22,7 +22,7 @@ class TabView extends React.Component {
         <Reaching tabLabel="Reaching" navigator={navigator} />
         <Teaching tabLabel="Teaching" navigator={navigator} />
         <Training tabLabel="Training" navigator={navigator} />
-        <Training tabLabel="..." navigator={navigator} />
+        <Training tabLabel="Events" navigator={navigator} />
       </ScrollableTabView>
     );
   }
