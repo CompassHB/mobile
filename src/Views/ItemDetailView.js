@@ -7,17 +7,109 @@ import cheerio from 'cheerio'
 const htmlStyles = {
   h3: {
 	   textAlign: 'left',
-     color: 'black'
+      color: 'black',
+      fontWeight: 'normal' 
 	},
   h2: {
     color: 'black'
   },
   span: {
-    color: 'black'
+    color: 'black',
+    fontWeight: 'bold'
   },
   p: {
     color: 'black'
+  },
+  h4: {
+    fontWeight: 'normal'
+  },
+  "span_verse_num": {
+    "fontSize": "80%",
+    "fontWeight": "bold",
+    "paddingRight": ".15em",
+    "paddingLeft": ".25em",
+    "verticalAlign": "text-top"
+  },
+  "span_woc": {},
+  "span_chapter_num": {
+    "fontWeight": "bold",
+    "paddingRight": ".5em"
+  },
+  "div_esv_text_p": {
+    "textIndent": "2em"
+  },
+  "div_esv_text_p_same_paragraph": {
+    "textIndent": "0"
+  },
+  "div_block_indent_p": {
+    "textIndent": "0",
+    "paddingLeft": "2.5em",
+    "marginLeft": "0"
+  },
+  "span_indent": {
+    "paddingLeft": "2em"
+  },
+  "span_indent_2": {
+    "paddingLeft": "4em"
+  },
+  "span_psalm_doxology_line": {
+    "paddingLeft": "4em"
+  },
+  "span_declares_line": {
+    "paddingLeft": "6em"
+  },
+  "span_small_caps": {
+    "fontVariant": "small-caps"
+  },
+  "span_selah": {
+    "fontStyle": "italic",
+    "marginLeft": "1em"
+  },
+  "p_extra_space": {
+    "marginTop": "2em"
+  },
+  "div_block_indent_span_verse_num": {
+    "paddingLeft": "0"
+  },
+  "div_block_indent_span_woc": {
+    "paddingLeft": "0"
+  },
+  "h4_speaker": {
+    "paddingLeft": "10em",
+    "fontVariant": "small-caps",
+    "marginBottom": "-1em"
+  },
+  "h4_textual_note": {
+    "fontVariant": "small-caps"
+  },
+  "h4_psalm_acrostic_title": {
+    "fontVariant": "small-caps"
+  },
+  "h4_psalm_title": {},
+  "span_footnote": {
+    "fontSize": "80%",
+    "paddingRight": ".5em",
+    "paddingLeft": "0em",
+    "verticalAlign": "text-top"
+  },
+  "div_footnotes_h3": {
+    "marginTop": "0",
+    "marginBottom": "0"
+  },
+  "div_footnotes_p": {
+    "textIndent": "0"
+  },
+  "span_footnote_ref": {
+    "fontWeight": "bold"
+  },
+  "p_copyright": {
+    "textIndent": "0"
+  },
+  "object_audio": {
+    "margin": "0 0 0 10px",
+    "padding": "0"
   }
+ 
 };
 
 
