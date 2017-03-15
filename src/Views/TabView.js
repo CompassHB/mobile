@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import Teaching from './Teaching'
 import Training from './Training'
 import Reaching from './Reaching'
+import Event from './Event'
 
 class TabView extends React.Component {
 
@@ -22,7 +23,7 @@ class TabView extends React.Component {
         <Reaching tabLabel="Reaching" navigator={navigator} />
         <Teaching tabLabel="Teaching" navigator={navigator} />
         <Training tabLabel="Training" navigator={navigator} />
-        <Training tabLabel="Events" navigator={navigator} />
+        <Event tabLabel="Events" navigator={navigator} />
       </ScrollableTabView>
     );
   }
