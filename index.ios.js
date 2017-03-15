@@ -7,4 +7,6 @@
 import { AppRegistry } from 'react-native';
 import App from './index.js'
 
+console.disableYellowBox = true;
+
 AppRegistry.registerComponent('compasshb', () => App);
