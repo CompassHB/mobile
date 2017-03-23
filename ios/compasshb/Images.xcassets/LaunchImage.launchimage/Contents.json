@@ -3,6 +3,13 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "logo_compass.png",
+      "extent" : "full-screen",
+      "scale" : "2x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
       "filename" : "Icon-App-83.5x83.5@2x-1.png",
       "extent" : "full-screen",
       "scale" : "1x"
